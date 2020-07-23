@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.ovgusev</groupId>
 	<artifactId>actuator-app</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0</version>
 	<name>actuator-app</name>
 
 	<properties>
