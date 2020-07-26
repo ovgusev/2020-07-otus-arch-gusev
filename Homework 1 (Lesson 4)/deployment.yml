@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ovgusev-otus-arch-1-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: actuator-app
+  template:
+    metadata:
+      labels:
+        app: actuator-app
+    spec:
+      containers:
+      - name: actuator-app
+        image: ovgusev/actuator-app:latest
+        ports:
+          - name: web
+            containerPort: 8000
+        livenessProbe:
+          httpGet:
+            port: web
+            path: /health
+          initialDelaySeconds: 10
+          periodSeconds: 5
+          timeoutSeconds: 1
+        readinessProbe:
+          httpGet:
+            port: web
+            path: /health
+          initialDelaySeconds: 10
+          periodSeconds: 1
