@@ -16,7 +16,8 @@ minikube addons enable ingress
 kubectl apply -f .
 ```
 url для проверки:
-```http://arch.homework/otusapp/ovgusev/health
+```
+http://arch.homework/otusapp/ovgusev/health
 ```
 ---
 # Задание
