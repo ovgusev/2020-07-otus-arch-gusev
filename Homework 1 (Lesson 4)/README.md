@@ -1,11 +1,25 @@
-#Результат
-Образ приложения: `ovgusev/actuator-app`
-Запуск minikube: `minikube start --vm-driver=hyperv`
-Включение ingress аддона: `minikube addons enable ingress`
-Запуск приложения в default namespace: `kubectl apply -f .`
-url для проверки: `http://arch.homework/otusapp/ovgusev/health`
+# Результат
+Образ приложения:
+```
+ovgusev/actuator-app
+```
+Запуск minikube: 
+```
+minikube start --vm-driver=hyperv
+```
+Включение ingress аддона:
+```
+minikube addons enable ingress
+```
+Запуск приложения в default namespace:
+```
+kubectl apply -f .
+```
+url для проверки:
+```http://arch.homework/otusapp/ovgusev/health
+```
 ---
-#Задание
+# Задание
 
 Основы работы с Kubernetes (часть 2)
 Создать минимальный сервис, который
